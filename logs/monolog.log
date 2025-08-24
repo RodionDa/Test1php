@@ -1,0 +1,4 @@
+[2025-08-22T15:10:59.402678+00:00] logger1.WARNING: Warning-message [] []
+[2025-08-22T15:10:59.494645+00:00] logger1.ERROR: Error-message [] []
+[2025-08-22T15:11:42.356587+00:00] logger1.WARNING: Warning-message [] []
+[2025-08-22T15:11:42.434458+00:00] logger1.ERROR: Error-message [] []
