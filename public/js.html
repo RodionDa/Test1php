@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вывод данных</title>
+</head>
+<body>
+    <h1>Результат:</h1>
+    <h2>data1:</h2>
+    <pre id="data1"></pre>
+    <h2>data2:</h2>
+    <pre id="data2"></pre>
+
+    <script>
+        var data = {
+            hello1: 'value2',
+            hello2: 'value3',
+            hello3: 'value4',
+            hello4: 'value5',
+            hello5: 'value1',
+            hello6: 'value2',
+            hello7: 'value3'
+        };
+
+        var data1 = {};
+        var data2 = {};
+
+        // Решение:
+        for (var key in data) {
+            // Извлекаем номер из ключа (например, из "hello2" получаем 2)
+            var number = parseInt(key.replace('hello', ''), 10);
+
+            // Если номер четный, добавляем в data1
+            if (number % 2 === 0) {
+                data1[key] = data[key];
+            }
+
+            // Если значение заканчивается на четное число, добавляем в data2
+            var valueNumber = parseInt(data[key].replace('value', ''), 10);
+            if (valueNumber % 2 === 0) {
+                data2[key] = data[key];
+            }
+        }
+
+        // Выводим результат в веб-страницу
+        document.getElementById('data1').textContent = JSON.stringify(data1, null, 4);
+        document.getElementById('data2').textContent = JSON.stringify(data2, null, 4);
+    </script>
+</body>
+</html>
